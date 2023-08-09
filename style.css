@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root{
+    --dark: #464747;
+    --text: #8e3899;
+    --shadow: rgb(114 4 68);
+    --white: #ffffff;
+    --grey: #333333;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--grey);
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.container {
+    background-color: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    width: 500px;
+    max-width: 100%;
+}
+.header {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--white);
+    padding: 0px 40px;
+}
+#name{
+    font-family: 'Alkatra', cursive;
+    font-size: 22px;
+    text-shadow: 3px 3px var(--shadow);
+}
+.form-control {
+    margin-bottom: 0px;    /**/
+    padding-bottom: 20px;
+    position: relative;
+    padding: 7px 50px;     /*should be spacing after every question*/
+    
+}
+.form-control1 {
+    margin-bottom: 0px;    
+    padding-bottom: 20px;
+    position: relative;
+    padding: 7px 50px; 
+    flex: 10%;
+}
+.form-control label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.form-control input {   
+    border: 2px solid #423d3d;/*border*/
+    border-radius: 4px;
+    display: block;    
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+}
+.form-control input:focus {
+	outline: 0;
+	border-color: #777;
+}
+button {
+    background-color: var(--dark);
+    border: none;
+    color: rgb(0, 0, 0);
+    display: block;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+}
