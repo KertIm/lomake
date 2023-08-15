@@ -17,25 +17,33 @@
             </div>
             <p>Siirry kentästä toiseen tab-näppäimellä.</p>
         </div>
-        <form action="form" id="form">
+
+            <form name="form" onsubmit="validateForm()" id="form"></form>
 
             <div class="form-control">
                 <label for="id">Käyttäjä ID:</label>
                 <input type="text" placeholder="käyttäjä ID" id="id">
+                <p>virhe teksti tähän<span id="idPaikka" style="color: red;"></span></p>
+                
             </div>
             <div class="form-control">
                 <label for="salasana">Salasana:</label>
                 <input type="password" placeholder="salasana" id="salasana">
+                <span id="salasanaPaikka" style="color: red;"></span>
             </div>
             <div class="form-control">
                 <label for="nimi">Nimi:</label>
                 <input type="text" placeholder="nimi" id="nimi">
+                <span id="nimiPaikka" style="color: red;"></span>
             </div>
+            
+            <input id="send" type="submit" value="register" onclick="validateForm()" /> 
+            <!--
             <div class="form-control">
                 <label for="osoite">Osoite:</label>
                 <input type="text" placeholder="osoite" id="osoite">
             </div>
-            <div class="form-control">      <!--takes postinumero kohdan pois-->
+            <div class="form-control">      
                 <label for="maa">Maa:</label>
                 <select id="maat" name="maat" form="maat">
                     <option value="suomi">Suomi</option>
@@ -52,14 +60,12 @@
                 <input type="email" placeholder="sähköposti" id="email">
             </div>
 
-            <!--sukupuoli piste valinta-->
             <div class="form-control1">
                 <label for="sukupuoli">Sukupuoli:</label> 
                 <input type="radio" id="sukupuoli" name="sukupuoli" value="mies"> Mies  
                 <input type="radio" id="sukupuoli" name="sukupuoli" value="nainen"> Nainen  
             </div>
 
-            <!--kieli taulukko valinta-->
             <div class="form-control1">
                 <div class="taulukko">
                     <label for="kieli">Kieli:</label>
@@ -68,11 +74,14 @@
                 </div>
             </div>
 
-            <div class="form-control"><!--lisätietoja (valinnainen teksti)iso laatikko-->
+            <div class="form-control">
                 <label for="lisatietoja">Lisätietoja:</label>
                 <input type="text" id="lisatietoja">
             </div>
-            <button type="button" onclick="checkInputs()">lähetä</button> <!----> 
+     -->      
+                
+                
+            
         </form>
     </div>
 </body>
