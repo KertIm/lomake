@@ -7,6 +7,7 @@
     --shadow: rgb(114 4 68);
     --white: #ffffff;
     --grey: #333333;
+    --light: #605f5f;
 }
 * {
     box-sizing: border-box;
@@ -31,7 +32,6 @@ body {
 }
 .header {
     background-color: var(--white);
-    border-bottom: 1px solid var(--white);
     padding: 0px 40px;
 }
 #name{
@@ -40,11 +40,10 @@ body {
     text-shadow: 3px 3px var(--shadow);
 }
 .form-control {
-    margin-bottom: 0px;    /**/
+    margin-bottom: 0px; 
     padding-bottom: 20px;
     position: relative;
-    padding: 7px 50px;     /*should be spacing after every question*/
-    
+    padding: 7px 50px;    
 }
 .form-control1 {
     margin-bottom: 0px;    
@@ -53,12 +52,23 @@ body {
     padding: 7px 50px; 
     flex: 10%;
 }
+#lisa {
+  margin-bottom: 20px; 
+}
+input[type=number] {                /*poista nuolet postinumerosta*/  
+    -moz-appearance: textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {  /*poista nuolet postinumerosta*/
+  -webkit-appearance: none;
+  margin: 0;
+}
 .form-control label {
     display: inline-block;
     margin-bottom: 5px;
 }
 .form-control input {   
-    border: 2px solid #423d3d;/*border*/
+    border: 2px solid #423d3d;
     border-radius: 4px;
     display: block;    
     font-family: inherit;
@@ -70,8 +80,8 @@ body {
 	outline: 0;
 	border-color: #777;
 }
-button {
-    background-color: var(--shadow);
+#send {
+    background-color: var(--light);
     border: none;
     color: rgb(0, 0, 0);
     display: block;
@@ -80,13 +90,12 @@ button {
     padding: 10px;
     width: 100%;
 }
-#send {
-    background-color: var(--shadow);
-    border: none;
-    color: rgb(0, 0, 0);
-    display: block;
-    font-family: inherit;
-    font-size: 20px;
-    padding: 10px;
-    width: 100%;
+@media (max-width: 800px) {
+	#name {
+	  font-size: 15px; 
+      text-shadow: 1px 1px var(--shadow);
+	}
+    .header{
+        font-size: 12px;
+    }
 }

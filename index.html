@@ -20,67 +20,90 @@
 
             <form name="form" onsubmit="validateForm()" id="form"></form>
 
-            <div class="form-control">
+            <div class="form-control">   
                 <label for="id">Käyttäjä ID:</label>
                 <input type="text" placeholder="käyttäjä ID" id="id">
-                <p>virhe teksti tähän<span id="idPaikka" style="color: red;"></span></p>
-                
+                <span id="idPaikka" style="color: red;"></span>
+                <span id="idPaikka1" style="color: green;"></span>
             </div>
+
             <div class="form-control">
                 <label for="salasana">Salasana:</label>
                 <input type="password" placeholder="salasana" id="salasana">
                 <span id="salasanaPaikka" style="color: red;"></span>
+                <span id="salasanaPaikka1" style="color: green;"></span>
             </div>
+
             <div class="form-control">
                 <label for="nimi">Nimi:</label>
                 <input type="text" placeholder="nimi" id="nimi">
                 <span id="nimiPaikka" style="color: red;"></span>
+                <span id="nimiPaikka1" style="color: green;"></span>
             </div>
-            
-            <input id="send" type="submit" value="register" onclick="validateForm()" /> 
-            <!--
+
             <div class="form-control">
                 <label for="osoite">Osoite:</label>
                 <input type="text" placeholder="osoite" id="osoite">
+                <span id="osoitePaikka" style="color: red;"></span>
+                <span id="osoitePaikka1" style="color: green;"></span>
             </div>
+
             <div class="form-control">      
                 <label for="maa">Maa:</label>
-                <select id="maat" name="maat" form="maat">
-                    <option value="suomi">Suomi</option>
-                    <option value="joku">joku</option>
-                </select>
-
+                <select id="maa" name="maa" form="maat">
+                    <option value="suomi" id = "choice1">Suomi</option>
+                    <option value="joku" id = "choice2">Ruotsi</option>
+                    <option value="joku" id = "choice3">Joku muu</option>
+                </select>               
+                <span id="maaPaikka" style="color: red;"></span>
+                <span id="maaPaikka1" style="color: green;"></span>
             </div>
-            <div class="form-control">
+
+            <div class="form-control">          <!--fix side thing-->
                 <label for="postinumero">Postinumero:</label>
-                <input type="text" placeholder="postinumero" id="postinumero">
-            </div>   
+                <input type="number" placeholder="postinumero" id="postinumero" >
+                <span id="postinumeroPaikka" style="color: red;"></span>
+                <span id="postinumeroPaikka1" style="color: green;"></span>
+            </div>
+            
             <div class="form-control">
                 <label for="email">Sähköposti:</label>
                 <input type="email" placeholder="sähköposti" id="email">
+                <span id="emailPaikka" style="color: red;"></span>
+                <span id="emailPaikka1" style="color: green;"></span>
             </div>
 
             <div class="form-control1">
                 <label for="sukupuoli">Sukupuoli:</label> 
-                <input type="radio" id="sukupuoli" name="sukupuoli" value="mies"> Mies  
-                <input type="radio" id="sukupuoli" name="sukupuoli" value="nainen"> Nainen  
+                <input type ="radio" name = "radio" value = "mies" id = "radio1" > Male </input>
+                <input type ="radio" name = "radio" value = "nainen" id = "radio2" > Nainen </input>
+                <span id="sukupuoliPaikka" style="color: red;"></span>
+                <span id="sukupuoliPaikka1" style="color: green;"></span> 
             </div>
 
             <div class="form-control1">
                 <div class="taulukko">
                     <label for="kieli">Kieli:</label>
-                    <input type="checkbox" id="kieli" name="kieli" value="suomi">Suomi 
-                    <input type="checkbox" id="kieli" name="muu" value="muu">Muu kuin suomi
+                    <input type="checkbox" name="kieli" value="suomi" id="check1">Suomi 
+                    <input type="checkbox" name="kieli" value="englanti" id="check2">Englanti
+                    <input type="checkbox" name="kieli" value="ruotsi" id="check3">Ruotsi
+                    <span id="kieliPaikka" style="color: red;"></span>
+                    <span id="kieliPaikka1" style="color: green;"></span>
                 </div>
+                
             </div>
 
             <div class="form-control">
-                <label for="lisatietoja">Lisätietoja:</label>
-                <input type="text" id="lisatietoja">
+                
+                <label for="lisatietoja">Lisätietoja:</label><br>
+                <div id="lisa">
+                    <input type="text" id="lisatietoja" style="height:60px">
+                    <span id="lisatietojaPaikka" style="color: red;"></span>
+                    <span id="lisatietojaPaikka1" style="color: green;"></span>
+                </div>
             </div>
-     -->      
-                
-                
+
+            <input id="send" type="submit" value="register" onclick="validateForm()" /> 
             
         </form>
     </div>
